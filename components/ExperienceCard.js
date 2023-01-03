@@ -2,7 +2,7 @@ import React from "react"
 import { motion } from "framer-motion"
 function ExperienceCard() {
 	return (
-		<article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center p-10 bg-[#292929] hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
+		<article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 h-[100%] w-[500px] md:w-[600px] xl:w-[900px] snap-center p-10 bg-[#292929] hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
 			<motion.img
 				initial={{
 					y: -100,
