@@ -5,7 +5,7 @@ import BackgroundCircles from "./BackgroundCircles"
 
 function Hero() {
 	const [text] = useTypewriter({
-		words: ["Hi, I'm Ayoub Bassou !", "My motto :", "Eat,", "Sleep,", "<Code />,", "Repeat !"],
+		words: ["Hi, I'm Ayoub !", "My motto :", "Eat,", "Sleep,", "<Code />,", "Repeat !"],
 		loop: true,
 		delaySpeed: 2000,
 	})
@@ -19,14 +19,14 @@ function Hero() {
 			/>
 			<div className="z-20">
 				<h2 className="text-sm uppercase text-gray-500 tracking-[10px]">Web developer</h2>
-				<h1 className="text-5xl lg:text-6xl font-semibold scroll-px-10">
-					<span className="mr-3">{text}</span>
+				<h1 className="py-5 text-3xl lg:text-6xl font-semibold scroll-px-10">
+					<span className="mr-1">{text}</span>
 					<Cursor
 						cursorStyle="_"
 						cursorColor="#F7AB0A"
 					/>
 				</h1>
-				<div className="pt-5">
+				<div className="flex flex-col md:flex-row">
 					<Link
 						href="#about"
 						className="heroButton"

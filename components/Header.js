@@ -14,12 +14,14 @@ function Header() {
 			>
 				<SocialIcon
 					url="https://www.linkedin.com/in/bassouayoub/"
+					target={"_blank"}
 					fgColor="white"
 					bgColor="gray"
 				/>
 				<SocialIcon
 					className="cursor-pointer"
 					url="https://github.com/tyranosaure"
+					target={"_blank"}
 					fgColor="white"
 					bgColor="gray"
 				/>

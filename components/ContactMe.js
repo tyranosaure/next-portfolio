@@ -14,13 +14,13 @@ function ContactMe() {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 1.5 }}
-			className="h-screen flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 justify-center min-h-screen xl:space-y-0 mx-auto items-center"
+			className="h-screen flex relative flex-col text-center md:text-left xl:flex-row md:max-w-[2000px] xl:px-10 justify-center min-h-screen xl:space-y-0 mx-auto pr-4 overflow-hidden"
 		>
-			<div className="flex flex-col space-y-10">
-				<h4 className="text-4xl font-semibold text-center">
+			<div className="flex-1 my-24 flex flex-col space-y-10">
+				<h4 className="text-3xl sm:text-4xl font-semibold mx-4">
 					Want to talk ? <span className="decoration-[#F7AB0A]/50 underline">Let's talk</span>
 				</h4>
-				<div className="space-y-10">
+				<div className="space-y-4">
 					<div className="flex items-center space-x-5 justify-center">
 						<PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
 						<p className="text-2xl">+33 1 23 45 67 89</p>
@@ -36,9 +36,9 @@ function ContactMe() {
 				</div>
 				<form
 					onSubmit={handleSubmit(onSubmit)}
-					className="flex flex-col space-y-2 w-fit mx-auto"
+					className="flex flex-col space-y-2 w-full px-4 sm:px-0"
 				>
-					<div className="flex space-x-2">
+					<div className="flex flex-col sm:flex-row space-x-0 space-y-2 sm:space-y-0 sm:space-x-2">
 						<input
 							className="contactInput"
 							type="text"

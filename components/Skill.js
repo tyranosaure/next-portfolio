@@ -1,13 +1,13 @@
 import React from "react"
 import { motion } from "framer-motion"
 
-function Skill({ directionLeft, img = "https://fr.reactjs.org/logo-og.png" }) {
+function Skill({ img = "https://fr.reactjs.org/logo-og.png" }) {
 	return (
-		<div className="group relative flex cursor-pointer ">
+		<div className="group relative flex cursor-pointer p-1 mx-auto">
 			<motion.img
-				initial={{ x: directionLeft ? -200 : 200, opacity: 0 }}
+				initial={{ opacity: 0 }}
 				transition={{ duration: 1 }}
-				whileInView={{ opacity: 1, x: 0 }}
+				whileInView={{ opacity: 1 }}
 				viewport={{ once: true }}
 				className="xl:w-32 xl:h-32 w-24 h-24 md:h-28 md:w-28  rounded-full border border-gray-500 object-cover filter group-hover:grayscale transition duration-300 ease-in-out"
 				src={img}
