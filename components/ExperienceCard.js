@@ -2,7 +2,7 @@ import React from "react"
 import { motion } from "framer-motion"
 function ExperienceCard() {
 	return (
-		<article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 h-full w-[500px] md:w-[600px] xl:w-[900px] snap-center p-10 mx-5 bg-[#292929] hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden border-[rgba(255,255,255,0.1)] border-[0.5px]">
+		<article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 h-full w-[500px] md:w-[600px] xl:w-[900px] snap-center py-10 mx-5 bg-[#292929] hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden border-[rgba(255,255,255,0.1)] border-[0.5px] max-w-[100%] md:max-w-[45%] xl:max-w-[30%]">
 			<motion.img
 				initial={{
 					y: -100,
@@ -15,7 +15,7 @@ function ExperienceCard() {
 				src="https://www.asi.fr/sites/default/files/styles/og_image/public/2021-09/logo-asi-og.jpg?itok=mwkfRV5B"
 				alt=""
 			/>
-			<div className="px-0 md:px-10">
+			<div className="px-0 md:px-10 w-full flex flex-col items-center">
 				<h4 className="text-4xl font-light">Web developer</h4>
 				<p className="font-black text-2xl mt-1">ASI</p>
 				<div className="flex space-x-2 my-2">
@@ -35,13 +35,12 @@ function ExperienceCard() {
 						alt=""
 					/>
 				</div>
-				<p className="uppercase py-5 text-gray-500">Started work..</p>
-				<ul className="list-disc space-y-4 ml-5 text-lg">
-					<li>Summary points</li>
-					<li>Summary points</li>
-					<li>Summary points</li>
-					<li>Summary points</li>
-					<li>Summary points</li>
+				<p className="uppercase py-5 text-gray-500">Started work...</p>
+				<ul className="text-lg flex flex-wrap justify-around items-center">
+					<li className="w-[50%] md:w-auto text-center">Summary points</li>
+					<li className="w-[50%] md:w-auto text-center">Summary points</li>
+					<li className="w-[50%] md:w-auto text-center">Summary points</li>
+					<li className="w-[50%] md:w-auto text-center">Summary points</li>
 				</ul>
 			</div>
 		</article>

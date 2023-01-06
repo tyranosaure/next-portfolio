@@ -16,8 +16,8 @@ function ContactMe() {
 			transition={{ duration: 1.5 }}
 			className="h-screen flex relative flex-col text-center md:text-left xl:flex-row md:max-w-[2000px] xl:px-10 justify-center min-h-screen xl:space-y-0 mx-auto pr-4 overflow-hidden"
 		>
-			<div className="flex-1 my-24 flex flex-col space-y-10">
-				<h4 className="text-3xl sm:text-4xl font-semibold mx-4">
+			<div className="flex-1 my-24 flex flex-col space-y-10 items-center justify-center">
+				<h4 className="text-3xl sm:text-4xl font-semibold mx-4 text-center">
 					Want to talk ? <span className="decoration-[#F7AB0A]/50 underline">Let's talk</span>
 				</h4>
 				<div className="space-y-4">
@@ -36,17 +36,17 @@ function ContactMe() {
 				</div>
 				<form
 					onSubmit={handleSubmit(onSubmit)}
-					className="flex flex-col space-y-2 w-full px-4 sm:px-0"
+					className="flex flex-col space-y-2 w-full px-4 sm:max-w-4xl"
 				>
 					<div className="flex flex-col sm:flex-row space-x-0 space-y-2 sm:space-y-0 sm:space-x-2">
 						<input
-							className="contactInput"
+							className="contactInput sm:flex-1"
 							type="text"
 							placeholder="Name"
 							{...register("name", { required: true })}
 						/>
 						<input
-							className="contactInput"
+							className="contactInput sm:flex-1"
 							placeholder="Email"
 							type="email"
 							{...register("email", { required: true })}

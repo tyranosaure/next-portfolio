@@ -3,9 +3,9 @@ import { motion } from "framer-motion"
 function Projects() {
 	const projects = [1, 2, 3, 4, 5]
 	return (
-		<div className="relative h-screen flex flex-col text-center md:text-left max-w-[2000px] xl:px-10 justify-center min-h-screen xl:space-y-0 mx-auto py-24 pr-4">
+		<div className="relative h-screen flex flex-col text-center md:text-left xl:px-10 justify-center min-h-screen xl:space-y-0 mx-auto py-24 pr-4">
 			<h3 className="uppercase  tracking-[15px] sm:tracking-[20px] text-gray-500 text-2xl py-4 text-center">Projects</h3>
-			<div className="relative flex-1 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+			<div className="relative flex-1 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 max-w-7xl mx-auto">
 				{projects?.map((project, index) => (
 					<div
 						key={index}
