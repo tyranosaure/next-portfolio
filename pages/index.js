@@ -1,4 +1,6 @@
-import { ArrowUpCircleIcon, ArrowUpIcon } from "@heroicons/react/24/solid"
+import { ArrowUpIcon } from "@heroicons/react/24/solid"
+import { createClient } from "next-sanity"
+
 import About from "components/About"
 import ContactMe from "components/ContactMe"
 import Header from "components/Header"
@@ -8,8 +10,11 @@ import Skills from "components/Skills"
 import WorkExperience from "components/WorkExperience"
 import Head from "next/head"
 import Link from "next/link"
+import { useEffect, useState } from "react"
 
-export default function Home() {
+export default function Home({ hero, projects, experiences, navigation, screens }) {
+	const [lang, setLang] = useState("fr")
+
 	return (
 		<div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 scrollbar scrollbar-thumb-[#F7AB0A]/80 scrollbar-track-gray-400/20 scroll-smooth transition duration-150">
 			<Head>
@@ -23,28 +28,43 @@ export default function Home() {
 					href="/favicon.ico"
 				/>
 			</Head>
-
-			<Header />
+			<Header
+				lang={lang}
+				setLang={setLang}
+				screenData={screens.filter((screen) => screen.title === "Header")[0]}
+			/>
 			<section
 				id="hero"
 				className="snap-start"
 			>
-				<Hero />
+				<Hero
+					hero={hero}
+					navigation={navigation}
+					lang={lang}
+					screenData={screens.filter((screen) => screen.title === "Hero")[0]}
+				/>
 			</section>
 
 			<section
 				id="about"
 				className="snap-center"
 			>
-				<About />
+				<About
+					lang={lang}
+					screenData={screens.filter((screen) => screen.title === "About me")[0]}
+				/>
 			</section>
 
-			<section
+			{/* <section
 				id="experience"
 				className="snap-center"
 			>
-				<WorkExperience />
-			</section>
+				<WorkExperience
+					experiences={experiences}
+					screenData={screens.filter((screen) => screen.title === "Experiences")[0]}
+					lang={lang}
+				/>
+			</section> */}
 
 			<section
 				id="skills"
@@ -53,11 +73,12 @@ export default function Home() {
 				<Skills />
 			</section>
 
+			{/* 
 			<section
 				id="projects"
 				className="snap-center"
 			>
-				<Projects />
+				<Projects projects={projects} />
 			</section>
 
 			<section
@@ -73,7 +94,32 @@ export default function Home() {
 				>
 					<ArrowUpIcon className="h-[50px] w-[50px] rounded-full text-black hover:text-white p-[10px] transition duration-300" />
 				</Link>
-			</footer>
+			</footer> */}
 		</div>
 	)
+}
+
+const client = createClient({
+	projectId: "00eqf7sb",
+	dataset: "production",
+	apiVersion: "2023-02-15",
+	useCdn: false,
+})
+
+export async function getStaticProps() {
+	const hero = await client.fetch(`*[_type == "hero"]`)
+	const navigation = await client.fetch(`*[_type == "navigation"]`)
+	const projects = await client.fetch(`*[_type == "projects"]`)
+	const experiences = await client.fetch(`*[_type == "experience"]`)
+	const screens = await client.fetch(`*[_type == "screens"]`)
+
+	return {
+		props: {
+			hero,
+			projects,
+			experiences,
+			navigation,
+			screens,
+		},
+	}
 }

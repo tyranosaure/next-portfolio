@@ -29,10 +29,6 @@ function ContactMe() {
 						<EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
 						<p className="text-2xl">email@gmail.com</p>
 					</div>
-					<div className="flex items-center space-x-5 justify-center">
-						<MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-						<p className="text-2xl">123 rue qui n'existe pas</p>
-					</div>
 				</div>
 				<form
 					onSubmit={handleSubmit(onSubmit)}
