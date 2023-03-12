@@ -2,7 +2,8 @@ import Link from "next/link"
 import React, { useEffect } from "react"
 import { Cursor, useTypewriter } from "react-simple-typewriter"
 import BackgroundCircles from "./BackgroundCircles"
-
+import Image from "next/image"
+import FirePuppet from "assets/fire-puppet.gif"
 function Hero({ hero, navigation, lang, screenData }) {
 	const { jobTitle } = JSON.parse(screenData.JSONscreenVariables)
 
@@ -24,11 +25,13 @@ function Hero({ hero, navigation, lang, screenData }) {
 	})
 
 	return (
-		<div className="h-screen flex flex-col space-y-4 items-center justify-center text-center overflow-hidden z-0">
+		<div className="h-[100dvh] flex flex-col space-y-4 items-center justify-center text-center overflow-hidden z-0">
 			<BackgroundCircles />
-			<img
-				className="relative rounded-full h-32 w-32 mx-auto object-cover"
-				src="https://media.tenor.com/5UrSnlHPuXkAAAAC/fire-puppet.gif"
+			<Image
+				className="relative rounded-full mx-auto object-cover aspect-square"
+				width="150"
+				height="150"
+				src={FirePuppet}
 				alt="profile"
 			/>
 			<div className="z-20">

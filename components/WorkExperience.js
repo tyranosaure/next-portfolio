@@ -9,7 +9,7 @@ function WorkExperience({ screenData, experiences, lang }) {
 			initial={{ opacity: 0 }}
 			transition={{ duration: 1.5 }}
 			whileInView={{ opacity: 1 }}
-			className="h-screen flex overflow-hidden flex-col text-left px-10 py-24 justify-center mx-auto mr-4"
+			className="h-[100dvh] flex overflow-hidden flex-col text-left px-10 py-24 justify-center mx-auto mr-4"
 		>
 			<h3 className="text-center uppercase tracking-[15px] md:tracking-[20px] text-gray-500 text-xl md:text-2xl py-8">
 				{screenName[lang]}
