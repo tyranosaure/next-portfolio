@@ -1,5 +1,4 @@
 import { ArrowUpIcon } from "@heroicons/react/24/solid"
-import { createClient } from "next-sanity"
 
 import About from "components/About"
 import ContactMe from "components/ContactMe"
@@ -10,9 +9,10 @@ import Skills from "components/Skills"
 import WorkExperience from "components/WorkExperience"
 import Head from "next/head"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { useState } from "react"
+import { client } from "services/sanity"
 
-export default function Home({ hero, projects, experiences, navigation, screens }) {
+export default function Home({ hero, projects, experiences, navigation, screens, skills }) {
 	const [lang, setLang] = useState("fr")
 
 	return (
@@ -55,7 +55,7 @@ export default function Home({ hero, projects, experiences, navigation, screens 
 				/>
 			</section>
 
-			{/* <section
+			<section
 				id="experience"
 				className="snap-center"
 			>
@@ -64,30 +64,40 @@ export default function Home({ hero, projects, experiences, navigation, screens 
 					screenData={screens.filter((screen) => screen.title === "Experiences")[0]}
 					lang={lang}
 				/>
-			</section> */}
+			</section>
 
 			<section
 				id="skills"
 				className="snap-center"
 			>
-				<Skills />
+				<Skills
+					screenData={screens.filter((screen) => screen.title === "Skills")[0]}
+					lang={lang}
+					skills={skills}
+				/>
 			</section>
 
-			{/* 
 			<section
 				id="projects"
 				className="snap-center"
 			>
-				<Projects projects={projects} />
+				<Projects
+					projects={projects}
+					screenData={screens.filter((screen) => screen.title === "Projects")[0]}
+					lang={lang}
+				/>
 			</section>
 
 			<section
 				id="contact"
 				className="snap-center"
 			>
-				<ContactMe />
+				<ContactMe
+					screenData={screens.filter((screen) => screen.title === "Contact")[0]}
+					lang={lang}
+				/>
 			</section>
-			*/}
+
 			<footer className="sticky bottom-0 z-50 flex items-center justify-center py-5">
 				<Link
 					href="#hero"
@@ -100,19 +110,13 @@ export default function Home({ hero, projects, experiences, navigation, screens 
 	)
 }
 
-const client = createClient({
-	projectId: "00eqf7sb",
-	dataset: "production",
-	apiVersion: "2023-02-15",
-	useCdn: false,
-})
-
 export async function getStaticProps() {
 	const hero = await client.fetch(`*[_type == "hero"]`)
 	const navigation = await client.fetch(`*[_type == "navigation"]`)
-	const projects = await client.fetch(`*[_type == "projects"]`)
+	const projects = await client.fetch(`*[_type == "project"]`)
 	const experiences = await client.fetch(`*[_type == "experience"]`)
 	const screens = await client.fetch(`*[_type == "screens"]`)
+	const skills = await client.fetch(`*[_type == "skills"]`)
 
 	return {
 		props: {
@@ -121,6 +125,7 @@ export async function getStaticProps() {
 			experiences,
 			navigation,
 			screens,
+			skills,
 		},
 	}
 }

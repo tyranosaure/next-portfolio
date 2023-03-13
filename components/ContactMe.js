@@ -2,8 +2,11 @@ import React from "react"
 import { motion } from "framer-motion"
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid"
 import { useForm } from "react-hook-form"
+import Parse from "html-react-parser"
 
-function ContactMe() {
+function ContactMe({ screenData, lang }) {
+	const { screenName, JSONscreenVariables } = screenData
+	const { phone, email, buttonText } = JSON.parse(JSONscreenVariables)
 	const { register, handleSubmit } = useForm()
 	const onSubmit = (data) => {
 		window.location.href = `mailto:abassou642@gmail.com?subject=${data.subject}&body=Hi, my name is ${data.name}. ${data.message} (${data.email})`
@@ -17,17 +20,15 @@ function ContactMe() {
 			className="h-[100dvh] flex relative flex-col text-center md:text-left xl:flex-row md:max-w-[2000px] xl:px-10 justify-center min-h-screen xl:space-y-0 mx-auto pr-4 overflow-hidden"
 		>
 			<div className="flex-1 my-24 flex flex-col space-y-10 items-center justify-center">
-				<h4 className="text-3xl sm:text-4xl font-semibold mx-4 text-center">
-					Want to talk ? <span className="decoration-[#F7AB0A]/50 underline">Let's talk</span>
-				</h4>
+				<h4 className="text-3xl sm:text-4xl font-semibold mx-4 text-center">{Parse(screenName[lang])}</h4>
 				<div className="space-y-4">
 					<div className="flex items-center space-x-5 justify-center">
 						<PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-						<p className="text-2xl">+33 1 23 45 67 89</p>
+						<p className="text-2xl">{phone}</p>
 					</div>
 					<div className="flex items-center space-x-5 justify-center">
 						<EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-						<p className="text-2xl">email@gmail.com</p>
+						<p className="text-2xl">{email}</p>
 					</div>
 				</div>
 				<form
@@ -63,7 +64,7 @@ function ContactMe() {
 						type="submit"
 						className="bg-[#F7AB0A] hover:bg-[#a77508] py-5 px-10 rounded-md text-black transition-all font-bold text-lg"
 					>
-						Submit
+						{buttonText[lang]}
 					</button>
 				</form>
 			</div>

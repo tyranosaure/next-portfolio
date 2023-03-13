@@ -33,6 +33,7 @@ function Hero({ hero, navigation, lang, screenData }) {
 				height="150"
 				src={FirePuppet}
 				alt="profile"
+				priority
 			/>
 			<div className="z-20">
 				<h2 className="text-sm uppercase text-gray-500 tracking-[10px]">{jobTitle[lang]}</h2>
