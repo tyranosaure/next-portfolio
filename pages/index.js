@@ -16,7 +16,7 @@ export default function Home({ hero, projects, experiences, navigation, screens,
 	const [lang, setLang] = useState("fr")
 
 	return (
-		<div className="bg-[rgb(36,36,36)] text-white h-[100dvh] snap-y snap-mandatory overflow-y-scroll z-0 scrollbar scrollbar-thumb-[#F7AB0A]/80 scrollbar-track-gray-400/20 scroll-smooth transition duration-150">
+		<main className="bg-[rgb(36,36,36)] text-white h-[100dvh] snap-y snap-mandatory overflow-y-scroll z-0 scrollbar scrollbar-thumb-[#F7AB0A]/80 scrollbar-track-gray-400/20 scroll-smooth transition duration-150">
 			<Head>
 				<title>Ayoub's Portfolio</title>
 				<meta
@@ -106,7 +106,7 @@ export default function Home({ hero, projects, experiences, navigation, screens,
 					<ArrowUpIcon className="h-[50px] w-[50px] rounded-full text-black hover:text-white p-[10px] transition duration-300" />
 				</Link>
 			</footer>
-		</div>
+		</main>
 	)
 }
 
