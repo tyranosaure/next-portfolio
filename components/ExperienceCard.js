@@ -4,7 +4,7 @@ import { urlFor } from "services/sanity"
 function ExperienceCard({ experience, lang }) {
 	const { jobTitle, company, startDate, endDate, summary, technologies, image } = experience
 	return (
-		<article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 h-full w-[500px] md:w-[600px] xl:w-[900px] snap-center py-10 mx-5 bg-[#292929] hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden border-[rgba(255,255,255,0.1)] border-[0.5px] max-w-[100%] md:max-w-[45%] xl:max-w-[30%]">
+		<article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 h-full w-[500px] md:w-[600px] xl:w-[900px] snap-center py-10 mx-5 bg-[#292929] hover:opacity-100 opacity-80 cursor-pointer transition-opacity duration-200 overflow-hidden border-white/10 border-4 max-w-[100%] md:max-w-[45%] xl:max-w-[30%]">
 			<motion.img
 				initial={{
 					y: -100,

@@ -14,7 +14,7 @@ function About({ screenData, lang }) {
 			viewport={{ once: true }}
 			className="flex flex-col h-[100dvh] text-center max-w-7xl py-24 px-10 mx-auto items-center"
 		>
-			<h3 className="uppercase tracking-[15px] sm:tracking-[20px] text-gray-500 text-2xl mb-4">{screenName[lang]}</h3>
+			<h3 className="screenName">{screenName[lang]}</h3>
 			<div className="flex-1 flex items-center justify-center flex-col md:flex-row text-center md:text-left">
 				<motion.img
 					initial={{ x: -200, opacity: 0 }}

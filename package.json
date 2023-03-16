@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.12",
+    "@next/swc-darwin-arm64": "^13.2.4",
     "@sanity/image-url": "^1.0.2",
     "framer-motion": "^7.6.2",
     "html-react-parser": "^3.0.12",
@@ -18,8 +19,10 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.38.0",
+    "react-icons": "^4.8.0",
     "react-simple-typewriter": "^4.0.5",
-    "react-social-icons": "^5.15.0"
+    "react-social-icons": "^5.15.0",
+    "sass": "^1.59.3"
   },
   "devDependencies": {
     "@types/node": "18.11.7",

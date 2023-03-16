@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.heroButton {
+		@apply mx-2 px-4 py-2 rounded-full uppercase text-sm tracking-widest text-gray-500 transition-all hover:bg-[#F7AB0A] border-transparent hover:border-black/[15%] border-4 font-bold hover:text-black/75;
+	}
+
+	.contactInput {
+		@apply outline-none bg-slate-400/10 rounded-md border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40;
+	}
+
+	.screenName {
+		@apply uppercase tracking-[15px] sm:tracking-[20px] text-gray-500 mb-4 text-center;
+	}
+}
+
+main {
+	h1,
+	h2,
+	h3,
+	h4 {
+		font-family: "Marlin";
+	}
+
+	h3 {
+		font-size: 1.75rem;
+	}
+}
+
+@font-face {
+	font-family: "PlayfairDisplay";
+	src: local("PlayfairDisplay"), url("./fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "PlayfairDisplay";
+	src: local("PlayfairDisplay"), url("./fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Marlin";
+	src: local("Marlin"), url("./fonts/Marlin/marlin.woff2") format("truetype");
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: local("Montserrat"), url("./fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: local("Montserrat"), url("./fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+	font-style: italic;
+}
+
+main {
+	font-family: "Montserrat";
+}

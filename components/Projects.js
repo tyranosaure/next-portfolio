@@ -6,7 +6,7 @@ function Projects({ screenData, lang, projects }) {
 
 	return (
 		<div className="relative h-[100dvh] flex flex-col text-center md:text-left xl:px-10 justify-center min-h-screen xl:space-y-0 mx-auto py-24 pr-4">
-			<h3 className="uppercase  tracking-[15px] sm:tracking-[20px] text-gray-500 text-2xl py-4 text-center">{screenName[lang]}</h3>
+			<h3 className="screenName">{screenName[lang]}</h3>
 			<div className="relative flex-1 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 max-w-7xl mx-auto">
 				{projects?.map(({ projectName, image, description }, index) => (
 					<div
