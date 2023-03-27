@@ -4,7 +4,7 @@
 
 @layer components {
 	.heroButton {
-		@apply mx-2 px-4 py-2 rounded-full uppercase text-sm tracking-widest text-gray-500 transition-all hover:bg-[#F7AB0A] border-transparent hover:border-black/[15%] border-4 font-bold hover:text-black/75;
+		@apply mx-2 px-4 py-2 rounded-full uppercase text-sm tracking-widest text-gray-400 transition-all hover:bg-[#F7AB0A] border-transparent hover:border-black/[15%] border-4 font-bold hover:text-black/75;
 	}
 
 	.contactInput {
