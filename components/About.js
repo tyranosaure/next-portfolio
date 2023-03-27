@@ -23,6 +23,7 @@ function About({ screenData, lang }) {
 					viewport={{ once: true }}
 					src="https://upload.wikimedia.org/wikipedia/en/6/62/Kermit_the_Frog.jpg"
 					className="flex-shrink-0 w-44 h-44 rounded-full object-cover mb-5 md:mb-0 md:rounded-lg md:w-56 md:h-56 xl:w-[500px] xl:h-[450px]"
+					alt="own portrait"
 				/>
 				<div className="flex flex-col justify-center items-center space-y-10 px-0 md:px-10 overflow-hidden">
 					<h4 className="text-4xl font-semibold text-center">{Parse(topLine[lang])}</h4>
