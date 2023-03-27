@@ -34,7 +34,7 @@ function Hero({ hero, navigation, lang, screenData }) {
 	})
 
 	return (
-		<div className="relative h-[100dvh] flex flex-col items-center justify-center text-center overflow-hidden">
+		<div className="relative h-[100svh] flex flex-col items-center justify-center text-center overflow-hidden">
 			<BackgroundCircles>
 				<Image
 					className="relative rounded-full mx-auto object-cover aspect-square border-4 border-black/20"

@@ -53,7 +53,7 @@ function Header({ lang, setLang, screenData }) {
 					height="46"
 					alt="Language"
 					onClick={() => setLang(lang === "fr" ? "eng" : "fr")}
-					className="box-border border-4 border-white/20 border-opacity-25 rounded-full cursor-pointer mx-3 hover:scale-[1.25] transition duration-300"
+					className="box-border border-4 border-white/20 hover:border-white/60 border-opacity-25 rounded-full cursor-pointer mx-3 transition duration-300"
 				/>
 			</motion.div>
 		</header>
