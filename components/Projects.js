@@ -1,6 +1,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { urlFor } from "services/sanity"
+import Image from "next/image"
 function Projects({ screenData, lang, projects }) {
 	const { screenName } = screenData
 
@@ -13,15 +14,20 @@ function Projects({ screenData, lang, projects }) {
 						key={index}
 						className="min-w-full snap-center flex flex-col space-y-5 justify-center items-center mb-4"
 					>
-						<motion.img
+						<motion.div
 							initial={{ opacity: 0 }}
 							transition={{ duration: 1.2 }}
 							whileInView={{ opacity: 1 }}
 							viewport={{ once: true }}
-							src={urlFor(image).width(500).url()}
-							alt=""
 							className="h-36 md:h-56"
-						/>
+						>
+							<Image
+								src={urlFor(image).width(300).url()}
+								alt="project image"
+								width={144}
+								height={224}
+							/>
+						</motion.div>
 						<div className="space-y-10 max-w-full mx-8">
 							<h4 className="text-4xl font-semibold text-center">
 								<span className="underline decoration-[#F7AB0A]/50">{projectName[lang]}</span>
