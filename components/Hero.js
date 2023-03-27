@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 import BackgroundCircles from "./BackgroundCircles"
 import Image from "next/image"
-import FirePuppet from "assets/fire-puppet.png"
+import FirePuppet from "assets/fire-puppet.webp"
 
 function Hero({ hero, navigation, lang }) {
 	const [showText, setShowText] = useState(false)
