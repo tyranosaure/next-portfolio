@@ -108,6 +108,7 @@ export default function Home({ hero, projects, experiences, navigation, screens,
 				<Link
 					href="#hero"
 					className="bg-[#cc8e08] hover:bg-blue-500 border-4 border-black/20 rounded-full transition duration-300"
+					aria-label="Back to top"
 				>
 					<ArrowUpIcon className="h-[50px] w-[50px] rounded-full text-black hover:text-white p-[10px] transition duration-300" />
 				</Link>

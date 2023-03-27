@@ -21,6 +21,7 @@ function Header({ lang, setLang, screenData }) {
 					href="https://github.com/tyranosaure"
 					target="_blank"
 					className="flex justify-center items-center rounded-full bg-gray-600 text-[24px] p-[11px] border-4 border-black/20 hover:bg-[#F05032] transition duration-300"
+					aria-label="Link to my github profile"
 				>
 					<BsGithub />
 				</Link>
@@ -28,6 +29,7 @@ function Header({ lang, setLang, screenData }) {
 					href="https://www.linkedin.com/in/bassouayoub/"
 					target="_blank"
 					className="flex justify-center items-center rounded-full bg-gray-600 text-[20px] p-[13px] border-4 border-black/20 hover:bg-[#0F61BA] transition duration-300"
+					aria-label="Link to my linkedin profile"
 				>
 					<TfiLinkedin />
 				</Link>
@@ -43,7 +45,10 @@ function Header({ lang, setLang, screenData }) {
 					href="#contact"
 					legacyBehavior={true}
 				>
-					<a className="hover:bg-[#F7AB0A] rounded-full transition duration-300 flex items-center hover:text-slate-700 border-4 border-transparent hover:border-black/20">
+					<a
+						className="hover:bg-[#F7AB0A] rounded-full transition duration-300 flex items-center hover:text-slate-700 border-4 border-transparent hover:border-black/20"
+						aria-label="Link to the contact me section"
+					>
 						<p className="uppercase px-5 py-3 hidden md:inline-flex text-sm font-bold">{contact[lang]}</p>
 					</a>
 				</Link>
@@ -51,9 +56,10 @@ function Header({ lang, setLang, screenData }) {
 					src={lang === "fr" ? FrFlag : EnFlag}
 					width="46"
 					height="46"
-					alt="Language"
+					alt="Change language"
 					onClick={() => setLang(lang === "fr" ? "eng" : "fr")}
 					className="box-border border-4 border-white/20 hover:border-white/60 border-opacity-25 rounded-full cursor-pointer mx-3 transition duration-300"
+					aria-label="Change language from French to English or vice versa"
 				/>
 			</motion.div>
 		</header>
