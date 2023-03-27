@@ -5,9 +5,9 @@ import { motion } from "framer-motion"
 
 import BackgroundCircles from "./BackgroundCircles"
 import Image from "next/image"
-import FirePuppet from "assets/fire-puppet.gif"
+import FirePuppet from "assets/fire-puppet.png"
 
-function Hero({ hero, navigation, lang, screenData }) {
+function Hero({ hero, navigation, lang }) {
 	const [showText, setShowText] = useState(false)
 	useEffect(() => {
 		hero &&
