@@ -14,7 +14,7 @@ function Header({ lang, setLang, screenData }) {
 			<motion.div
 				initial={{ x: -250, opacity: 0, scale: 0.5 }}
 				animate={{ x: 0, opacity: 1, scale: 1 }}
-				transition={{ duration: 1, delay: 3.25 }}
+				transition={{ duration: 1 }}
 				className="flex items-center space-x-2"
 			>
 				<Link
@@ -38,7 +38,7 @@ function Header({ lang, setLang, screenData }) {
 			<motion.div
 				initial={{ x: 250, opacity: 0, scale: 0.5 }}
 				animate={{ x: 0, opacity: 1, scale: 1 }}
-				transition={{ duration: 1, delay: 3.25 }}
+				transition={{ duration: 1 }}
 				className="flex flex-row items-center text-gray-300 cursor-pointer"
 			>
 				<Link

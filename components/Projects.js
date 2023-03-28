@@ -6,7 +6,7 @@ function Projects({ screenData, lang, projects }) {
 	const { screenName } = screenData
 
 	return (
-		<div className="relative h-[100lvh] flex flex-col text-center md:text-left xl:px-10 justify-center min-h-screen xl:space-y-0 mx-auto py-24 pr-4">
+		<div className="relative h-[100lvh] flex flex-col text-center md:text-left xl:px-10 justify-center min-h-screen xl:space-y-0 mx-auto py-24 pr-4 border-y-4 border-black/10 overflow-hidden">
 			<h3 className="screenName">{screenName[lang]}</h3>
 			<div className="relative flex-1 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 max-w-7xl mx-auto">
 				{projects?.map(({ projectName, image, description }, index) => (

@@ -102,7 +102,7 @@ export default function Home({ hero, projects, experiences, navigation, screens,
 			<motion.footer
 				initial={{ y: 100 }}
 				animate={{ y: 0 }}
-				transition={{ duration: 1, delay: 3.25 }}
+				transition={{ duration: 1 }}
 				className="sticky bottom-0 z-50 flex items-center justify-center py-5"
 			>
 				<Link

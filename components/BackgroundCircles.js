@@ -11,8 +11,8 @@ const BackgroundCircles = ({ children }) => {
 				children
 			) : (
 				<motion.div
-					animate={{ scale: [1, 1.5, 1.25, 1.75, 1], rotate: ["25deg", "-25deg", "380deg", "0deg"] }}
-					transition={{ duration: 3 }}
+					animate={{ rotate: ["25deg", "-25deg", "360deg"] }}
+					transition={{ duration: 1.5 }}
 					className="relative flex justify-center items-center"
 				>
 					<div className="absolute border-2 border-t-[12px] border-l-[12px] border-white/10 bg-[#1D1D1D] rounded-full h-[80dvh] w-[80dvh] ml-0 mt-0 animate-spin-slow" />

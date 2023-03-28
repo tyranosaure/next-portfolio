@@ -31,6 +31,6 @@ const useMediaQuery = (query) => {
 	return matches
 }
 
-const useIsSmall = () => useMediaQuery("(max-width: 640)")
+const useIsSmall = () => useMediaQuery("(max-width: 640px)")
 const useIsMedium = () => useMediaQuery("(max-width: 768px)")
 export { useIsSmall, useIsMedium }
