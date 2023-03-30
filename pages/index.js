@@ -48,7 +48,7 @@ export default function Home({ hero, projects, experiences, navigation, screens,
 
 			<section
 				id="about"
-				className="magicpattern snap-center"
+				className="snap-center solid-back"
 			>
 				<About
 					lang={lang}

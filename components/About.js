@@ -23,19 +23,18 @@ function About({ screenData, lang }) {
 					transition={{ duration: 1.2 }}
 					whileInView={{ x: 0, opacity: 1 }}
 					viewport={{ once: true }}
-					className="w-[150px] h-[150px]"
+					className="w-[150px] h-[150px] md:w-[300px] md:h-[300px] relative my-4 aspect-square"
 				>
 					<Image
 						src={KermitFrogPicture}
 						alt="own portrait"
-						width={150}
-						height={150}
-						className="object-cover rounded-full mb-5 md:mb-0 md:rounded-lg "
+						fill={true}
+						className="object-cover rounded-full mb-5 aspect-square"
 					/>
 				</motion.div>
 				<div className="flex flex-col justify-center items-center space-y-10 px-0 md:px-10 overflow-hidden">
 					<h4 className="text-4xl font-semibold text-center">{Parse(topLine[lang])}</h4>
-					<p className="text-base text-justify text-ellipsis overflow-hidden">{resume[lang]}</p>
+					<p className="text-base md:text-lg xl:text-2xl text-justify text-ellipsis overflow-hidden">{resume[lang]}</p>
 				</div>
 			</div>
 		</motion.div>

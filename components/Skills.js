@@ -1,7 +1,9 @@
 import React from "react"
 import { motion } from "framer-motion"
 import Skill from "./Skill"
-function Skills({ screenData, lang, skills }) {
+import SkillsArray from "./SkillsArray"
+
+function Skills({ screenData, lang }) {
 	const { screenName, JSONscreenVariables } = screenData
 	const { topLine } = JSON.parse(JSONscreenVariables)
 
@@ -13,15 +15,16 @@ function Skills({ screenData, lang, skills }) {
 			className="relative h-[100lvh] flex flex-col text-center md:text-left md:max-w-7xl xl:px-10 min-h-screen xl:space-y-0 mx-auto overflow-hidden pr-4 py-24"
 		>
 			<h3 className="screenName">{screenName[lang]}</h3>
-			<h3 className="p-4 uppercase tracking-[3px] text-gray-500 text-lg text-center">{topLine[lang]}</h3>
-			{skills && (
-				<div className="flex-1 flex flex-wrap justify-center items-center my-auto">
-					{skills?.map((skill, id) => (
-						<Skill
-							key={id}
-							{...skill}
-						/>
-					))}
+			{SkillsArray && (
+				<div className="flex-1 flex items-center justify-center">
+					<div className="grid grid-cols-4 grid-rows-4 w-fit gap-1 md:gap-4 m-auto animate-spin-skills group-[test]">
+						{SkillsArray.map((skill) => (
+							<Skill
+								key={skill.name}
+								{...skill}
+							/>
+						))}
+					</div>
 				</div>
 			)}
 		</motion.div>

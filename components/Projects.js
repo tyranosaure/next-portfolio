@@ -19,16 +19,16 @@ function Projects({ screenData, lang, projects }) {
 							transition={{ duration: 1.2 }}
 							whileInView={{ opacity: 1 }}
 							viewport={{ once: true }}
-							className="h-36 md:h-56"
+							className="relative my-4 w-[250px] h-[250px] md:w-[350px] md:h-[350px]"
 						>
 							<Image
 								src={urlFor(image).width(300).url()}
 								alt="project image"
-								width={144}
-								height={224}
+								fill={true}
+								className="object-contain"
 							/>
 						</motion.div>
-						<div className="space-y-10 max-w-full mx-8">
+						<div className="space-y-10 max-w-full mx-8 flex-1">
 							<h4 className="text-4xl font-semibold text-center">
 								<span className="underline decoration-[#F7AB0A]/50">{projectName[lang]}</span>
 							</h4>
