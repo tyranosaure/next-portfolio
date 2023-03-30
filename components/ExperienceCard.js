@@ -36,7 +36,7 @@ function ExperienceCard({ experience, lang }) {
 				<h4 className="text-2xl text-center">{jobTitle[lang]}</h4>
 				<p className="font-black text-lg mt-1 text-gray-400">{company}</p>
 				<div className="flex space-x-2 my-2">{technologies.map((technology) => getTechnologyIcon(technology))}</div>
-				<p className="bg-white/10 border-[3px] border-white/10 rounded-xl p-4">{summary[lang]}</p>
+				<p className="p-4 text-justify">{summary[lang]}</p>
 				<p className="py-2 text-gray-500 font-bold">{duration}</p>
 			</div>
 		</article>
