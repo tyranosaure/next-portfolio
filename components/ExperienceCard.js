@@ -46,7 +46,7 @@ function ExperienceCard({ experience, lang }) {
 export default ExperienceCard
 
 const getTechnologyIcon = (technology) => {
-	const className = "text-3xl text-gray-400"
+	const className = "text-3xl"
 	if (technology === "HTML") {
 		return (
 			<p className={`${className} text-[#E34F26]`}>
