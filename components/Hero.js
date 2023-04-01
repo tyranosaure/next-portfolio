@@ -29,7 +29,7 @@ function Hero({ hero, navigation, lang }) {
 		<div className="relative h-[100svh] flex flex-col items-center justify-center text-center overflow-hidden">
 			<BackgroundCircles>
 				<Image
-					className="relative rounded-full mx-auto object-cover aspect-square border-4 border-black/20 mb-3 sm:mb-0"
+					className="relative rounded-full mx-auto object-cover aspect-square border-4 border-white sm:border-4 sm:border-black/20 mb-3 sm:mb-0"
 					width="175"
 					height="175"
 					src={FirePuppet}
@@ -37,7 +37,6 @@ function Hero({ hero, navigation, lang }) {
 					priority
 				/>
 			</BackgroundCircles>
-
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}

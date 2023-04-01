@@ -14,7 +14,7 @@ function About({ screenData, lang }) {
 			transition={{ duration: 1.5 }}
 			whileInView={{ opacity: 1 }}
 			viewport={{ once: true }}
-			className="flex flex-col h-[100lvh] text-center max-w-7xl py-24 px-10 mx-auto items-center border-y-4 border-black/10"
+			className="flex flex-col h-[100lvh] text-center max-w-7xl py-24 px-10 mx-auto items-center border-y-4 border-black/10 overflow-hidden"
 		>
 			<h3 className="screenName">{screenName[lang]}</h3>
 			<div className="flex-1 flex items-center justify-center flex-col md:flex-row text-center md:text-left">
@@ -29,6 +29,7 @@ function About({ screenData, lang }) {
 						src={KermitFrogPicture}
 						alt="own portrait"
 						fill={true}
+						sizes="150px, min-width(768px) 300px"
 						className="object-cover rounded-full mb-5 aspect-square"
 					/>
 				</motion.div>

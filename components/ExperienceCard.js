@@ -46,54 +46,41 @@ function ExperienceCard({ experience, lang }) {
 export default ExperienceCard
 
 const getTechnologyIcon = (technology) => {
-	const className = "text-3xl"
+	let className = ""
+	let icon = "No icons found"
+
 	if (technology === "HTML") {
-		return (
-			<p className={`${className} text-[#E34F26]`}>
-				<FaHtml5 />
-			</p>
-		)
+		className = "text-[#E34F26]"
+		icon = <FaHtml5 />
 	} else if (technology === "CSS") {
-		return (
-			<p className={`${className} text-[#1572B6]`}>
-				<FaCss3Alt />
-			</p>
-		)
+		className = "text-[#1572B6]"
+		icon = <FaCss3Alt />
 	} else if (technology === "JavaScript") {
-		return (
-			<p className={`${className} text-[#F7DF1E]`}>
-				<FaJs />
-			</p>
-		)
+		className = "text-[#F7DF1E]"
+		icon = <FaJs />
 	} else if (technology === "Git") {
-		return (
-			<p className={`${className} text-[#D64331]`}>
-				<FaGitAlt />
-			</p>
-		)
+		className = "text-[#D64331]"
+		icon = <FaGitAlt />
 	} else if (technology === "Jenkins") {
-		return (
-			<p className={`${className} text-[#B94138]`}>
-				<FaJenkins />
-			</p>
-		)
+		className = "text-[#B94138]"
+		icon = <FaJenkins />
 	} else if (technology === "LESS") {
-		return (
-			<p className={`${className} text-[#2F4D75]`}>
-				<FaLess />
-			</p>
-		)
+		className = "text-[#2F4D75]"
+		icon = <FaLess />
 	} else if (technology === "Java") {
-		return (
-			<p className={`${className} text-[#DA8136]`}>
-				<FaJava />
-			</p>
-		)
+		className = "text-[#DA8136]"
+		icon = <FaJava />
 	} else if (technology === "MySQL") {
-		return (
-			<p className={`${className} text-[#085D86]`}>
-				<SiMysql />
-			</p>
-		)
+		className = "text-[#085D86]"
+		icon = <SiMysql />
 	}
+
+	return (
+		<p
+			key={technology}
+			className={`text-3xl ${className}`}
+		>
+			{icon}
+		</p>
+	)
 }

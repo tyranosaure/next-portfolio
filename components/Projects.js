@@ -19,10 +19,10 @@ function Projects({ screenData, lang, projects }) {
 							transition={{ duration: 1.2 }}
 							whileInView={{ opacity: 1 }}
 							viewport={{ once: true }}
-							className="relative my-4 w-[250px] h-[250px] md:w-[350px] md:h-[350px]"
+							className="relative my-4 w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] xl:w-[550px] xl:h-[550px] 2xl:w-[650px] 2xl:h-[650px]"
 						>
 							<Image
-								src={urlFor(image).width(300).url()}
+								src={urlFor(image).url()}
 								alt="project image"
 								fill={true}
 								className="object-contain"

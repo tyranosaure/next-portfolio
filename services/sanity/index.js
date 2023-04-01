@@ -1,9 +1,8 @@
-import React from "react"
 import imageUrlBuilder from "@sanity/image-url"
 import { createClient } from "next-sanity"
 
 const client = createClient({
-	projectId: "00eqf7sb",
+	projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
 	dataset: "production",
 	apiVersion: "2023-02-15",
 	useCdn: false,
