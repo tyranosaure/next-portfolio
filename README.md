@@ -59,7 +59,9 @@ or
 yarn dev
 ```
 
-5. Open your web browser and go to `http://localhost:3000` to view the running application.
+5. Open your web browser and go to [localhost:3000](http://localhost:3000)
+
+ to view the running application.
 
 That's it! Now you can explore the project and make changes as needed.
 
