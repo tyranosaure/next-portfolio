@@ -4,7 +4,7 @@
 
 @layer components {
 	.heroButton {
-		@apply mx-2 px-4 py-2 rounded-full uppercase text-sm tracking-widest text-gray-400 transition-all hover:bg-[#F7AB0A] border-transparent hover:border-black/[15%] border-4 font-bold hover:text-black/75;
+		@apply mx-2 px-4 py-2 rounded-full uppercase text-sm tracking-widest text-gray-400 transition-all hover:bg-[#F7AB0A] border-transparent hover:border-black/[15%] border-4 font-bold hover:text-black/75 w-fit;
 	}
 
 	.contactInput {
@@ -12,7 +12,7 @@
 	}
 
 	.screenName {
-		@apply uppercase tracking-[12px] sm:tracking-[20px] text-gray-500 mb-4 flex justify-center items-center w-fit;
+		@apply uppercase tracking-[12px] sm:tracking-[20px] text-gray-500 mb-4 flex justify-center items-center w-full;
 	}
 
 	.screenContainer {

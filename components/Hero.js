@@ -50,7 +50,7 @@ function Hero({ hero, navigation, lang }) {
 						cursorColor="#F7AB0A"
 					/>
 				</span>
-				<div className="flex flex-col pt-4 md:flex-row">
+				<div className="flex flex-col items-center pt-4 md:flex-row">
 					{navigation?.map((item, index) => (
 						<Link
 							key={index}
