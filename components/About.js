@@ -14,7 +14,7 @@ function About({ screenData, lang }) {
 			transition={{ duration: 1.5 }}
 			whileInView={{ opacity: 1 }}
 			viewport={{ once: true }}
-			className="h-auto screenContainer md:h-screen border-y-4 border-black/10"
+			className="screenContainer h-fit md:h-svh border-y-4 border-black/10"
 		>
 			<h3 className="screenName">{screenName[lang]}</h3>
 			<div className="flex flex-col items-center justify-center flex-1 text-center md:flex-row md:text-left">
