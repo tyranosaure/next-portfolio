@@ -1,5 +1,5 @@
 import Link from "next/link"
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import { Cursor, useTypewriter } from "react-simple-typewriter"
 import { motion } from "framer-motion"
 
@@ -17,7 +17,7 @@ function Hero({ hero, navigation, lang }) {
 			navigation.sort((a, b) => {
 				return a.order - b.order
 			})
-	}, [])
+	}, [hero, navigation])
 
 	const [text] = useTypewriter({
 		words: hero ? hero.map((item) => item.name[lang]) : [],
