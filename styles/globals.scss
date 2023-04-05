@@ -12,7 +12,11 @@
 	}
 
 	.screenName {
-		@apply uppercase tracking-[15px] sm:tracking-[20px] text-gray-500 mb-4 text-center;
+		@apply uppercase tracking-[12px] sm:tracking-[20px] text-gray-500 mb-4 flex justify-center items-center w-full;
+	}
+
+	.screenContainer {
+		@apply relative flex flex-col items-center h-[100lvh] max-w-7xl text-center py-24 px-10 mx-auto overflow-hidden
 	}
 }
 

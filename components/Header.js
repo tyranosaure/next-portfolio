@@ -10,7 +10,7 @@ import { TfiLinkedin } from "react-icons/tfi"
 function Header({ lang, setLang, screenData }) {
 	const { contact } = JSON.parse(screenData.JSONscreenVariables)
 	return (
-		<header className="sticky top-0 p-5 pr-8 flex items-center justify-between max-w-7xl mx-auto z-20">
+		<header className="sticky top-0 z-20 flex items-center justify-between p-5 pr-8 mx-auto max-w-7xl">
 			<motion.div
 				initial={{ x: -250, opacity: 0, scale: 0.5 }}
 				animate={{ x: 0, opacity: 1, scale: 1 }}
@@ -49,18 +49,19 @@ function Header({ lang, setLang, screenData }) {
 						className="hover:bg-[#F7AB0A] rounded-full transition duration-300 flex items-center hover:text-slate-700 border-4 border-transparent hover:border-black/20"
 						aria-label="Link to the contact me section"
 					>
-						<p className="uppercase px-5 py-3 hidden md:inline-flex text-sm font-bold">{contact[lang]}</p>
+						<p className="hidden px-5 py-3 text-sm font-bold uppercase md:inline-flex">{contact[lang]}</p>
 					</a>
 				</Link>
-				<Image
-					src={lang === "fr" ? FrFlag : EnFlag}
-					width="1.5rem"
-					height="1.5rem"
-					alt="Change language"
-					onClick={() => setLang(lang === "fr" ? "eng" : "fr")}
-					className="box-border border-4 border-white/20 hover:border-white/60 border-opacity-25 rounded-full cursor-pointer mx-3 transition duration-300"
-					aria-label="Change language from French to English or vice versa"
-				/>
+				<div className="relative ml-3 w-14 h-14">
+					<Image
+						src={lang === "fr" ? FrFlag : EnFlag}
+						fill={true}
+						alt="Change language"
+						onClick={() => setLang(lang === "fr" ? "eng" : "fr")}
+						className="transition duration-300 border-4 border-opacity-25 rounded-full cursor-pointer border-white/20 hover:border-white/60"
+						aria-label="Change language from French to English or vice versa"
+					/>
+				</div>
 			</motion.div>
 		</header>
 	)

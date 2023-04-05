@@ -14,10 +14,10 @@ function About({ screenData, lang }) {
 			transition={{ duration: 1.5 }}
 			whileInView={{ opacity: 1 }}
 			viewport={{ once: true }}
-			className="flex flex-col h-[100lvh] text-center max-w-7xl py-24 px-10 mx-auto items-center border-y-4 border-black/10 overflow-hidden"
+			className="screenContainer border-y-4 border-black/10"
 		>
 			<h3 className="screenName">{screenName[lang]}</h3>
-			<div className="flex-1 flex items-center justify-center flex-col md:flex-row text-center md:text-left">
+			<div className="flex flex-col items-center justify-center flex-1 text-center md:flex-row md:text-left">
 				<motion.div
 					initial={{ x: -200, opacity: 0 }}
 					transition={{ duration: 1.2 }}
@@ -30,12 +30,12 @@ function About({ screenData, lang }) {
 						alt="own portrait"
 						fill={true}
 						sizes="150px, min-width(768px) 300px"
-						className="object-cover rounded-full mb-5 aspect-square"
+						className="object-cover mb-5 rounded-full aspect-square"
 					/>
 				</motion.div>
-				<div className="flex flex-col justify-center items-center space-y-10 px-0 md:px-10 overflow-hidden">
+				<div className="flex flex-col items-center justify-center px-0 space-y-10 overflow-hidden md:px-10">
 					<h4 className="text-4xl font-semibold text-center">{Parse(topLine[lang])}</h4>
-					<p className="text-base md:text-lg xl:text-2xl text-justify text-ellipsis overflow-hidden">{resume[lang]}</p>
+					<p className="overflow-hidden text-base text-justify md:text-lg xl:text-2xl text-ellipsis">{resume[lang]}</p>
 				</div>
 			</div>
 		</motion.div>

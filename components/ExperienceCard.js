@@ -24,20 +24,20 @@ function ExperienceCard({ experience, lang }) {
 
 	return (
 		<article className="flex flex-col rounded-lg items-center snap-center p-5 mx-5 bg-[#292929] cursor-default overflow-hidden border-white/10 border-4 last:mr-auto first:ml-auto w-[40%] min-w-[290px] space-y-2">
-			<div className="relative flex-1 aspect-square my-4">
+			<div className="relative flex-1 my-4 aspect-square">
 				<Image
 					src={image ? urlFor(image).width(200).height(200).url() : NoImage}
 					fill={true}
 					alt="experience"
-					className="rounded-full object-cover border-4 border-white/10"
+					className="object-cover border-4 rounded-full border-white/10"
 				/>
 			</div>
-			<div className="w-full flex flex-col items-center space-y-4">
+			<div className="flex flex-col items-center w-full space-y-4">
 				<h4 className="text-2xl text-center">{jobTitle[lang]}</h4>
-				<p className="font-black text-lg mt-1 text-gray-400">{company}</p>
-				<div className="flex space-x-2 my-2">{technologies.map((technology) => getTechnologyIcon(technology))}</div>
+				<p className="mt-1 text-lg font-black text-gray-400">{company}</p>
+				<div className="flex my-2 space-x-2">{technologies.map((technology) => getTechnologyIcon(technology))}</div>
 				<p className="p-4 text-justify">{summary[lang]}</p>
-				<p className="py-2 text-gray-500 font-bold">{duration}</p>
+				<p className="py-2 font-bold text-gray-500">{duration}</p>
 			</div>
 		</article>
 	)

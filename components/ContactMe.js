@@ -17,12 +17,12 @@ function ContactMe({ screenData, lang }) {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 1.5 }}
-			className="h-[100lvh] flex relative flex-col text-center md:text-left xl:flex-row md:max-w-[2000px] xl:px-10 justify-center min-h-screen xl:space-y-0 mx-auto pr-4 overflow-hidden"
+			className="border-b-4 screenContainer border-black/10"
 		>
-			<div className="flex-1 my-24 flex flex-col space-y-10 items-center justify-center">
-				<h4 className="text-3xl sm:text-4xl font-semibold mx-4 text-center">{Parse(screenName[lang])}</h4>
+			<div className="flex flex-col items-center justify-center flex-1 my-24 space-y-10">
+				<h4 className="mx-4 text-3xl font-semibold text-center sm:text-4xl">{Parse(screenName[lang])}</h4>
 				<div className="space-y-4">
-					<div className="flex items-center space-x-5 justify-center">
+					<div className="flex flex-col items-center justify-center space-x-5 md:flex-row">
 						<EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
 						<p className="text-2xl">{email}</p>
 					</div>

@@ -26,10 +26,10 @@ function Hero({ hero, navigation, lang }) {
 	})
 
 	return (
-		<div className="relative h-[100svh] flex flex-col items-center justify-center text-center overflow-hidden">
+		<div className="flex-col justify-center px-6 screenContainer">
 			<BackgroundCircles>
 				<Image
-					className="relative rounded-full mx-auto object-cover aspect-square border-4 border-white sm:border-4 sm:border-black/20 mb-3 sm:mb-0"
+					className="relative object-cover mx-auto mb-3 border-4 border-white rounded-full aspect-square sm:border-4 sm:border-black/20 sm:mb-0"
 					width="175"
 					height="175"
 					src={FirePuppet}
@@ -43,14 +43,14 @@ function Hero({ hero, navigation, lang }) {
 				transition={{ duration: 1.25 }}
 				className="z-20 sm:absolute bg-white/0 md:top-[72dvh]"
 			>
-				<span className="text-3xl lg:text-6xl font-semibold scroll-px-10">
+				<span className="text-3xl font-semibold lg:text-6xl scroll-px-10">
 					<span className="font-[Marlin] mr-1 drop-shadow-2xl">{text}</span>
 					<Cursor
 						cursorStyle="_"
 						cursorColor="#F7AB0A"
 					/>
 				</span>
-				<div className="flex flex-col md:flex-row pt-4">
+				<div className="flex flex-col pt-4 md:flex-row">
 					{navigation?.map((item, index) => (
 						<Link
 							key={index}
