@@ -48,7 +48,7 @@ export default function Home({ hero, projects, experiences, navigation, screens,
 
 			<section
 				id="about"
-				className="snap-proximity md:snap-center solid-back"
+				className="snap-start md:snap-center solid-back"
 			>
 				<About
 					lang={lang}
