@@ -44,7 +44,7 @@ function Hero({ hero, navigation, lang }) {
 				className="z-20 sm:absolute bg-white/0 md:top-[72dvh]"
 			>
 				<span className="text-3xl font-semibold lg:text-6xl scroll-px-10">
-					<span className="font-[Marlin] mr-1 drop-shadow-2xl">{text}</span>
+					<span className="font-[Marlin] mr-1 drop-shadow-2xl whitespace-nowrap">{text}</span>
 					<Cursor
 						cursorStyle="_"
 						cursorColor="#F7AB0A"

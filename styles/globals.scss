@@ -12,7 +12,7 @@
 	}
 
 	.screenName {
-		@apply uppercase tracking-[12px] sm:tracking-[20px] text-gray-500 mb-4 flex justify-center items-center w-full;
+		@apply uppercase tracking-[12px] sm:tracking-[20px] text-gray-500 mb-4 flex justify-center items-center w-fit;
 	}
 
 	.screenContainer {
