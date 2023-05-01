@@ -19,13 +19,13 @@ function Projects({ screenData, lang, projects }) {
 							transition={{ duration: 1.2 }}
 							whileInView={{ opacity: 1 }}
 							viewport={{ once: true }}
-							className="relative my-4 w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] xl:w-[550px] xl:h-[550px] 2xl:w-[650px] 2xl:h-[650px]"
+							className="relative my-4 w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] xl:w-[550px] xl:h-[550px] 2xl:w-[650px] 2xl:h-[650px] rounded-3xl border-4 overflow-hidden"
 						>
 							<Image
 								src={urlFor(image).url()}
 								alt="project image"
 								fill={true}
-								className="object-contain"
+								className="object-cover"
 							/>
 						</motion.div>
 						<div className="flex-1 max-w-full mx-8 space-y-10">
@@ -37,7 +37,6 @@ function Projects({ screenData, lang, projects }) {
 					</div>
 				))}
 			</div>
-			<div className="w-full absolute top-[25%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12"></div>
 		</div>
 	)
 }

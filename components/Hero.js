@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 import BackgroundCircles from "./BackgroundCircles"
 import Image from "next/image"
-import FirePuppet from "assets/fire-puppet.webp"
+import HeroPic from "assets/hero-pic.webp"
 
 function Hero({ hero, navigation, lang }) {
 	useEffect(() => {
@@ -29,10 +29,10 @@ function Hero({ hero, navigation, lang }) {
 		<div className="flex-col justify-center px-6 screenContainer">
 			<BackgroundCircles>
 				<Image
-					className="relative object-cover mx-auto mb-3 border-4 border-white rounded-full aspect-square sm:border-4 sm:border-black/20 sm:mb-0"
-					width="175"
-					height="175"
-					src={FirePuppet}
+					className="relative object-cover mx-auto mb-3 bg-yellow-500 border-4 border-white rounded-full aspect-square sm:border-4 sm:mb-0"
+					width="200"
+					height="200"
+					src={HeroPic}
 					alt="profile"
 					priority
 				/>

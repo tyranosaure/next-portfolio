@@ -2,7 +2,7 @@ import React from "react"
 import { motion } from "framer-motion"
 import Parse from "html-react-parser"
 import Image from "next/image"
-import KermitFrogPicture from "assets/kermit-frog.webp"
+import HeroPic from "assets/hero-pic.webp"
 
 function About({ screenData, lang }) {
 	const { screenName, JSONscreenVariables } = screenData
@@ -26,11 +26,10 @@ function About({ screenData, lang }) {
 					className="w-[150px] h-[150px] md:w-[300px] md:h-[300px] relative my-4 aspect-square"
 				>
 					<Image
-						src={KermitFrogPicture}
+						src={HeroPic}
 						alt="own portrait"
 						fill={true}
-						sizes="150px, min-width(768px) 300px"
-						className="object-cover mb-5 rounded-full aspect-square"
+						className="object-cover mb-5 border-8 rounded-full bg-amber-500 aspect-square"
 					/>
 				</motion.div>
 				<div className="flex flex-col items-center justify-center px-0 space-y-10 overflow-hidden md:px-10">
